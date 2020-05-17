@@ -3,7 +3,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 
 def tinify(url):
-    tinyurl = ('http://localhost:5000/api-create?url=' + url)
+    tinyurl = ('https://pytinifier.herokuapp.com/api-create?url=' + url)
     with contextlib.closing(urlopen(tinyurl)) as response:
         return response.read().decode('utf-8')
 
